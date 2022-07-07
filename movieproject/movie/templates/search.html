@@ -1,6 +1,7 @@
+<h1>검색기능 구현을 해볼까르보나라는 조금 느끼하니 피클과 함께</h1>
 {% for o in obj %}
 
-<a href="{% url 'detail' o.id %}">영화의 상세적인 내용이 보고싶은가?</a>
+<a href="{% url 'detail' o.id %}">영화 상세보기</a>
 
 {{o.original_title}}<br />
 
@@ -14,10 +15,3 @@
 <br /><br /><br />
 
 {% endfor %}
-
-<!--검색 기능-->
-<form action="" method="POST">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="submit">
-</form>
